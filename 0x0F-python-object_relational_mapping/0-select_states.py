@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 '''
 Lists all states from the database htbn_0e_0_usa
-Syntax of Usage: ./0-select_states.py <mysql username><mysql password> <database>
+Syntax of Usage: ./0-select_states.py <mysql username>\
+                                      <mysql password>\
+                                      <database>
 Internal connection Parameters:
     host: Localhost
     port: 3306 
