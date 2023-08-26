@@ -6,7 +6,7 @@ Task 10: A Script that lists the State object with the name passed as argument f
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_State import State
+from model_state import Base, State
 
 
 if __name__ = "__main__":
