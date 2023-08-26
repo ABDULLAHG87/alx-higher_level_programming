@@ -5,7 +5,7 @@ A Script that prins the first state object of the database hbtn_0e_6_us
 
 import sys
 from module_state import Base, State 
-import sqlalchemy import create_engine
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
