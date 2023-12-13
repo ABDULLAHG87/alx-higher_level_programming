@@ -1,0 +1,23 @@
+#!/usr/bin/node
+
+/**
+ * A script to add a new function 'incr'
+ * @fileOverview
+ */
+
+const myObject = {
+  type: 'object',
+  value: 12
+};
+console.log(myObject);
+
+myObject.incr = function () {
+  this.value = this.value + 1;
+};
+
+myObject.incr();
+console.log(myObject);
+myObject.incr();
+console.log(myObject);
+myObject.incr();
+console.log(myObject);
