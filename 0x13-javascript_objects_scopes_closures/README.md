@@ -1,0 +1,1 @@
+## PROJECT TITLE: JavaScript - Objects, scope and closure
