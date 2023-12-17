@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-
+'''
+Script file to print state object with name passed as argument from
+database
+'''
 
 import sys
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from model_state import State
+from sqlalchemy.orm import Session,sessionmaker
+from model_state import Base, State
 
 if __name__ == "__main__":
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
@@ -12,11 +15,11 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
 
     # creating a session
-    Session = sessionmaker(bind=engine)
+    # Session = sessionmaker(bind=engine)
     session = Session()
 
-    louisiana = State(name="Louisiana")
-    session.add(louisiana)
+    new_state = State(name="Louisiana")
+    session.add(new_state)
     session.commit()
     print(louisiana.id)
 
