@@ -17,7 +17,8 @@ if __name__ = "__main__":
     session = Session()
 
     #declaring a boolean to detect present of name"
-    result = session.query(State).filter(State.name == sys.argv[4]).first()
+    match = sys.argv[4]
+    result = session.query(State).filter(name = match).first()
 
     # check if the state was found
     if result:
