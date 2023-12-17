@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 '''
-create a file that contains the class definition of a state 
+create a file that contains the class definition of a state
 '''
 
 from sqlalchemy import Column, Integer, String, ForeignKey, Table
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
+
 
 class State(Base):
     '''
