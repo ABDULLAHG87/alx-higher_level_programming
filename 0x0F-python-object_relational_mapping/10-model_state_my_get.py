@@ -17,13 +17,15 @@ if __name__ == "__main__":
     session = Session()
 
     #declaring a boolean to detect present of name"
-    match = sys.argv[4]
-    result = session.query(State).filter(name = match).first()
+    found = False
+    for state in session.query(State):
+        if state.name == sys.argv[4]:
+            print("{}".format(state.id))
+            found = True
+            break
 
     # check if the state was found
-    if result:
-        print(result.id)
-    else:
+    if found is False:
         print("Not found")
     # close session
     session.close()
