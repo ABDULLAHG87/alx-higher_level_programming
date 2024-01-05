@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""function that finds a peak in a list of unsorted integer"""
+"""Defines a peak finding algorithm"""
 
 def find_peak(list_of_integers):
     """Return the maximum integer within the list"""
-    if list_of_integers == []:
+    if not list_of_integers:
         return None
 
     size = len(list_of_integers)
@@ -13,7 +13,7 @@ def find_peak(list_of_integers):
         return max(list_of_integers)
 
 
-    mid = int(size/2)
+    mid = size//2
     peak = list_of_integers[mid]
     if peak > list_of_integers[mid - 1] and peak > list_of_integers[mid + 1]:
         return peak
