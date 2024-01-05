@@ -1,4 +1,4 @@
 #!/bin/bash
 # script that takes in a URL, send a POST request ot passed URl
-curl -sX POST -d "email:test@gmail.com&subject=I will always be here for PLD"\
+curl -s -X POST -d "email:test@gmail.com&subject=I will always be here for PLD"\
      "$1"
