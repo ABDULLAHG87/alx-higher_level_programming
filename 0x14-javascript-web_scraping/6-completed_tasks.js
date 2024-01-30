@@ -11,10 +11,12 @@ request.get(process.argv[2], { json: true }, (error, response, body) => {
   const completed = {};
 
   body.forEach((todo) => {
-    if (todo.completed && !completed[todo.userId]) {
-      completed[todo.userId] = 1;
-    } else {
-      completed[todo.userId] += 1;
+    if (todo.completed) {
+      if (!completed[todo.userId]) {
+        completed[todo.userId] = 1;
+      } else {
+        completed[todo.userId] += 1;
+      }
     }
   });
   console.log(completed);
